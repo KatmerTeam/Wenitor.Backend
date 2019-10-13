@@ -7,11 +7,11 @@ using Volo.Abp.Domain.Repositories;
 
 namespace Katmer.Wenitor
 {
-    public class AlertService :
+    public class AlertAppService :
         CrudAppService<Alert, AlertDTO, Guid, PagedAndSortedResultRequestDto, AlertDTO, AlertDTO>,
-        IAlertService
+        IAlertAppService
     {
-        public AlertService(IRepository<Alert, Guid> repository) : base(repository)
+        public AlertAppService(IRepository<Alert, Guid> repository) : base(repository)
         {
 
         }

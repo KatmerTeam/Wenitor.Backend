@@ -7,11 +7,11 @@ using Volo.Abp.Domain.Repositories;
 
 namespace Katmer.Wenitor
 {
-    public class TargetSelectorService :
+    public class TargetSelectorAppService :
         CrudAppService<TargetSelector, TargetSelectorDTO, Guid, PagedAndSortedResultRequestDto, TargetSelectorDTO, TargetSelectorDTO>,
-        ITargetSelectorService
+        ITargetSelectorAppService
     {
-        public TargetSelectorService(IRepository<TargetSelector, Guid> repository) : base(repository)
+        public TargetSelectorAppService(IRepository<TargetSelector, Guid> repository) : base(repository)
         {
 
         }

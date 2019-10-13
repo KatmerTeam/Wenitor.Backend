@@ -7,11 +7,11 @@ using Volo.Abp.Domain.Repositories;
 
 namespace Katmer.Wenitor
 {
-    public class TargetSourceService :
+    public class TargetSourceAppService :
         CrudAppService<TargetSource, TargetSourceDTO, Guid, PagedAndSortedResultRequestDto,TargetSourceDTO, TargetSourceDTO>,
-        ITargetSourceService
+        ITargetSourceAppService
     {
-        public TargetSourceService(IRepository<TargetSource, Guid> repository) : base(repository)
+        public TargetSourceAppService(IRepository<TargetSource, Guid> repository) : base(repository)
         {
 
         }

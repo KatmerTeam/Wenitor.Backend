@@ -6,8 +6,8 @@ using Volo.Abp.Application.Services;
 
 namespace Katmer.Wenitor
 {
-    public interface IScheduleCheckService :
-        ICrudAppService<ScheduleCheckDTO, Guid, PagedAndSortedResultRequestDto, ScheduleCheckDTO, ScheduleCheckDTO>
+    public interface ITargetSourceAppService :
+        ICrudAppService<TargetSourceDTO,Guid,PagedAndSortedResultRequestDto,TargetSourceDTO,TargetSourceDTO>
     {
     }
 }

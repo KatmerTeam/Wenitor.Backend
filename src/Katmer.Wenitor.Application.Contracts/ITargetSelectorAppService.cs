@@ -6,7 +6,7 @@ using Volo.Abp.Application.Services;
 
 namespace Katmer.Wenitor
 {
-    public interface ITargetSelectorService :
+    public interface ITargetSelectorAppService :
         ICrudAppService<TargetSelectorDTO, Guid, PagedAndSortedResultRequestDto, TargetSelectorDTO, TargetSelectorDTO>
     {
     }

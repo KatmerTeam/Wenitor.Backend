@@ -6,8 +6,8 @@ using Volo.Abp.Application.Services;
 
 namespace Katmer.Wenitor
 {
-    public interface IAlertService :
-        ICrudAppService<AlertDTO,Guid,PagedAndSortedResultRequestDto,AlertDTO,AlertDTO>
+    public interface IScheduleCheckAppService :
+        ICrudAppService<ScheduleCheckDTO, Guid, PagedAndSortedResultRequestDto, ScheduleCheckDTO, ScheduleCheckDTO>
     {
     }
 }

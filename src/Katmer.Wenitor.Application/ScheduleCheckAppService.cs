@@ -7,11 +7,11 @@ using Volo.Abp.Domain.Repositories;
 
 namespace Katmer.Wenitor
 {
-    public class ScheduleCheckService :
+    public class ScheduleCheckAppService :
         CrudAppService<ScheduleCheck, ScheduleCheckDTO, Guid, PagedAndSortedResultRequestDto, ScheduleCheckDTO, ScheduleCheckDTO>,
-        IScheduleCheckService
+        IScheduleCheckAppService
     {
-        public ScheduleCheckService(IRepository<ScheduleCheck, Guid> repository) : base(repository)
+        public ScheduleCheckAppService(IRepository<ScheduleCheck, Guid> repository) : base(repository)
         {
 
         }

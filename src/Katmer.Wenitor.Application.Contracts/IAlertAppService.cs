@@ -6,8 +6,8 @@ using Volo.Abp.Application.Services;
 
 namespace Katmer.Wenitor
 {
-    public interface ITargetSourceService :
-        ICrudAppService<TargetSourceDTO,Guid,PagedAndSortedResultRequestDto,TargetSourceDTO,TargetSourceDTO>
+    public interface IAlertAppService :
+        ICrudAppService<AlertDTO,Guid,PagedAndSortedResultRequestDto,AlertDTO,AlertDTO>
     {
     }
 }
