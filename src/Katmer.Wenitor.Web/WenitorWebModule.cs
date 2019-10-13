@@ -80,16 +80,11 @@ namespace Katmer.Wenitor.Web
             ConfigureSwaggerServices(context.Services);
             ConfigureMultiTenancy();
             
-            Configure<AbpAspNetCoreMvcOptions>(options =>
-            {
-                options
-                    .ConventionalControllers
-                    .Create(typeof(WenitorApplicationContractsModule).Assembly);
-            });
 
             //Disabled swagger since it does not support ASP.NET Core 3.0 yet!
             //ConfigureSwaggerServices(context.Services);
         }
+
 
         private void ConfigureCache(IConfigurationRoot configuration)
         {
