@@ -27,7 +27,7 @@ namespace Katmer.Wenitor.EntityFrameworkCore
             {
                 b.ToTable(WenitorConsts.DbTablePrefix + "TargetSelectors", WenitorConsts.DbSchema);
                 b.ConfigureByConvention();
-                b.Property(x => x.ExpressionString).IsRequired().HasMaxLength(512);
+                b.Property(x => x.ExpressionString).IsRequired().HasMaxLength(1024);
             });
 
             builder.Entity<Alert>(b =>
