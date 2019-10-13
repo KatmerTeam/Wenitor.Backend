@@ -10,8 +10,8 @@ namespace Katmer.Wenitor
         public string Name { get; set; }
         public string Title { get; set; }
         public string WebURL { get; set; }
-        public TargetSelector[] TargetSelectors { get; set; }
+        public ICollection<TargetSelector> TargetSelectors { get; set; }
         public ScheduleCheck ScheduleCheck { get; set;}
-        public Alert[] Alerts { get; set; }
+        public ICollection<Alert> Alerts { get; set; }
     }
 }
