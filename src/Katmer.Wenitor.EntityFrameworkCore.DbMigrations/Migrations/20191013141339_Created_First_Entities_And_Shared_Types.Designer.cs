@@ -3,15 +3,17 @@ using System;
 using Katmer.Wenitor.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Katmer.Wenitor.Migrations
 {
     [DbContext(typeof(WenitorMigrationsDbContext))]
-    partial class WenitorMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191013141339_Created_First_Entities_And_Shared_Types")]
+    partial class Created_First_Entities_And_Shared_Types
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

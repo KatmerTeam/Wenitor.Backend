@@ -20,6 +20,10 @@ namespace Katmer.Wenitor.EntityFrameworkCore
     public class WenitorDbContext : AbpDbContext<WenitorDbContext>
     {
         public DbSet<AppUser> Users { get; set; }
+        public DbSet<TargetSource> TargetSources { get; set; }
+        public DbSet<TargetSelector> TargetSelectors { get; set; }
+        public DbSet<ScheduleCheck> ScheduleChecks { get; set; }
+        public DbSet<Alert> Alerts { get; set; }
 
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside WenitorDbContextModelCreatingExtensions.ConfigureWenitor
