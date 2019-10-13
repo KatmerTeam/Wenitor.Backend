@@ -43,6 +43,11 @@ namespace Katmer.Wenitor.Web.Menus
             var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<WenitorResource>>();
 
             context.Menu.Items.Insert(0, new ApplicationMenuItem("Wenitor.Home", l["Menu:Home"], "/"));
+            context.Menu.AddItem(
+                new ApplicationMenuItem("Wenitor", l["Menu:Wenitor"])
+                    .AddItem(new ApplicationMenuItem("Wenitor.TargetSources", l["Menu:TargetSources"], url: "/TargetSources"))
+            );
+
 
             return Task.CompletedTask;
         }

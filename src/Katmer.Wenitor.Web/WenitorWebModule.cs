@@ -35,6 +35,7 @@ using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.UI;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Abp.AspNetCore.Mvc;
 
 namespace Katmer.Wenitor.Web
 {
@@ -64,7 +65,7 @@ namespace Katmer.Wenitor.Web
                 );
             });
         }
-        
+
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var hostingEnvironment = context.Services.GetHostingEnvironment();
@@ -78,6 +79,13 @@ namespace Katmer.Wenitor.Web
             ConfigureNavigationServices(configuration);
             ConfigureSwaggerServices(context.Services);
             ConfigureMultiTenancy();
+            
+            Configure<AbpAspNetCoreMvcOptions>(options =>
+            {
+                options
+                    .ConventionalControllers
+                    .Create(typeof(WenitorApplicationContractsModule).Assembly);
+            });
 
             //Disabled swagger since it does not support ASP.NET Core 3.0 yet!
             //ConfigureSwaggerServices(context.Services);

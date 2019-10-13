@@ -1,0 +1,22 @@
+﻿@page
+@using Katmer.Wenitor.Web.Pages.TargetSources
+@inherits Katmer.Wenitor.Web.Pages.WenitorPage
+@model IndexModel
+@section scripts
+{
+    <abp-script src="/Pages/TargetSources/index.js" />
+}
+<abp-card>
+    <abp-card-header>
+        <h2>@L["TargetSources"]</h2>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="TargetSourcesTable">
+            <thead>
+                <tr>
+                    <th>@L["Name"]</th>
+                </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>
